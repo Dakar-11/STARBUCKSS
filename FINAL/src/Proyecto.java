@@ -4,82 +4,33 @@ public class Proyecto {
     public double subtotal = 0, igv = 0, totalPagar = 0, pago = 0;
 
     Scanner dakar = new Scanner(System.in);
-    public void menuprincipal() {
-        int opcion;
-        do {
-            System.out.println("\n---- BIENVENIDO AL MENU PRINCIPAL ----");
-            System.out.println("Seleccione una opción:");
-            System.out.println("1. Bebidas");
-            System.out.println("2. Alimentos");
-            System.out.println("3. Merch y Café en Grano");
-            System.out.println("4. Packs y Boxes");
-            System.out.println("5. Salir");
-            opcion = dakar.nextInt();
-
-            switch (opcion) {
-                case 1:
-                    System.out.println("Seleccionó Bebidas.");
-                    Productos llamado1 = new Productos();
-                    llamado1.bebidas();
-                    break;
-                case 2:
-                    System.out.println("Seleccionó Alimentos.");
-                    Proyecto llamado2 = new Proyecto();
-                    llamado2.Menudealimentos();
-
-                    break;
-                case 3:
-                    System.out.println("Seleccionó Merch y Café en Grano");
-                    MerchYCafeEnGrano llamado3 = new MerchYCafeEnGrano();
-                    llamado3.MechyCaféenGrano();
-                    break;
-                case 4:
-                    System.out.println("Seleccionó Packs y Boxes");
-                    Productos llamado4 = new Productos();
-                    llamado4.packs();
-                    break;
-
-                case 5:
-                    System.err.println("Saliendo del programa. ¡Gracias por su visita!");
-                    break;
-                default:
-                    System.out.println("Opción no válida. Intente de nuevo.");
-                    return;
-            }
-        }
-        while (opcion != 5);
-    }
 
     public void Bienvenida() {
-
         System.out.println("⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐");
         System.out.println("⭐BIENVENIDO A LA SECCIÓN DE ALIMENTOS⭐");
         System.out.println("⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐");
-        this.Menudealimentos();
-
-
-    }
+        System.out.println(" ");
+        this.Menudealimentos();}
     public void Menudealimentos() {
-
         System.out.println("SELECCIONE UNA CATEGORIA DE PRODUCTOS:");
         System.out.println("1. Pastries🥙 \n2. Postres🧁 \n3. Sandwiches🥟 \n4. Regresar🔙" );
         opcion = dakar.nextInt();
-        this.Categorias();
+        this.Categoriadealimentos();
         this.Mascompras();
-
     }
-    public void Categorias() {
+    public void Categoriadealimentos() {
         switch (opcion) {
             case 1:
-                System.out.println("----PASTRIES----");
-                System.out.println("1. Banana Bread - S/ 8.00");
-                System.out.println("2. Muffin de Naranja - S/ 9.00");
-                System.out.println("3. Keke de Zanahoria - S/ 9.00");
-                System.out.println("4. Galleta Cranberry - S/ 5.50");
-                System.out.println("5. Keke de Limón - S/ 9.00");
-                System.out.println("6. Galleta de Chocochips - S/ 5.50");
-                System.out.println("7. Muffin de Berries - S/ 9.00");
-                System.out.println("8. Egg Bites de Jamón y Queso - S/ 9.00");
+                System.out.println("------------------PASTRIES----------------");
+                System.out.println("1. Banana Bread___________________ S/ 8.00");
+                System.out.println("2. Muffin de Naranja _____________ S/ 9.00");
+                System.out.println("3. Keke de Zanahoria______________ S/ 9.00");
+                System.out.println("4. Galleta Cranberry______________ S/ 5.50");
+                System.out.println("5. Keke de Limón__________________ S/ 9.00");
+                System.out.println("6. Galleta de Chocochips__________ S/ 5.50");
+                System.out.println("7. Muffin de Berries______________ S/ 9.00");
+                System.out.println("8. Egg Bites de Jamón y Queso_____ S/ 9.00");
+                System.out.println("------------------------------------------");
                 System.out.println("Seleccione el producto que desea comprar: ");
                 opcion = dakar.nextInt();
                 System.out.println("Ingrese la cantidad que desea comprar:");
@@ -107,13 +58,14 @@ public class Proyecto {
                 totalPagar += precioPastries * cantidad;
                 break;
             case 2:
-                System.out.println("----POSTRES----");
-                System.out.println("1. Crocante de Manzana Vegetal - S/ 15.00");
-                System.out.println("2. Cake Pop Vainilla - S/ 6.50");
-                System.out.println("3. Cheesecake de Chocolate - S/ 15.00");
-                System.out.println("4. Cheesecake de Arándanos - S/ 15.00");
-                System.out.println("5. Brownie de Cookies & Cream - S/ 8.50");
-                System.out.println("6. Torta de Chocolate - S/ 12.50");
+                System.out.println("---------------------POSTRES----------------");
+                System.out.println("1. Crocante de Manzana Vegetal_____ S/ 15.00");
+                System.out.println("2. Cake Pop Vainilla_______________ S/ 6.50");
+                System.out.println("3. Cheesecake de Chocolate_________ S/ 15.00");
+                System.out.println("4. Cheesecake de Arándanos_________ S/ 15.00");
+                System.out.println("5. Brownie de Cookies & Cream______ S/ 8.50");
+                System.out.println("6. Torta de Chocolate______________ S/ 12.50");
+                System.out.println("--------------------------------------------");
                 System.out.println("Seleccione el producto que desea comprar: ");
                 opcion = dakar.nextInt();
                 System.out.println("Ingrese la cantidad que desea comprar:");
@@ -131,21 +83,22 @@ public class Proyecto {
                     case 5: precioPostres = 8.50;break;
                     case 6: precioPostres = 12.50;break;
                     default: System.out.println("Producto no válido.");
-                        return;
+                    return;
                 }
                 subtotal += calcularSubtotalSinIGV(precioPostres, cantidad);
                 igv += (precioPostres * cantidad) - calcularSubtotalSinIGV(precioPostres, cantidad);
                 totalPagar += precioPostres * cantidad;
                 break;
             case 3:
-                System.out.println("----SANDWICHES----");
-                System.out.println("1. Sandwich Italiano - S/ 14.00");
-                System.out.println("2. Croissant de Mantequilla - S/ 5.50");
-                System.out.println("3. Croissant de Jamón Serrano y Queso - S/ 15.50");
-                System.out.println("4. Croissant Jamón del País y Queso - S/ 15.50");
-                System.out.println("5. Croissant Jamón Inglés y Queso - S/ 15.50");
-                System.out.println("6. Sandwich Chicken Pesto Parmesano - S/ 15.50");
-                System.out.println("7. Empanada de Lomo - S/ 9.50");
+                System.out.println("-------------------SANDWICHES--------------------");
+                System.out.println("1. Sandwich Italiano_____________________ S/ 14.00");
+                System.out.println("2. Croissant de Mantequilla______________ S/ 5.50");
+                System.out.println("3. Croissant de Jamón Serrano y Queso____ S/ 15.50");
+                System.out.println("4. Croissant Jamón del País y Queso______ S/ 15.50");
+                System.out.println("5. Croissant Jamón Inglés y Queso________ S/ 15.50");
+                System.out.println("6. Sandwich Chicken Pesto Parmesano______ S/ 15.50");
+                System.out.println("7. Empanada de Lomo______________________ S/ 9.50");
+                System.out.println("-------------------------------------------------");
                 System.out.println("Seleccione el producto que desea comprar: ");
                 opcion = dakar.nextInt();
                 System.out.println("Ingrese la cantidad que desea comprar:");
@@ -173,21 +126,23 @@ public class Proyecto {
                 break;
             case 4:
                 System.out.println("¿ESTA SEGURO QUE DESEA SALIR?");
+                System.out.println("usted ya tiene en su canasta un valor de:"+totalPagar+"soles");
                 System.out.println("1.Si \n2.No");
                 opcion = dakar.nextInt();
                 if (opcion == 1) {
-                    this.menuprincipal();
+                    Categorias categorias = new Categorias();
+                    categorias.menuprincipal();
                 } else if (opcion == 2) {
-                    System.out.println("usted tiene en su canasta un valor de:"+totalPagar);
-                    this.Categorias();
+                    System.out.println("-------------------------------------------------");
+                    this.Menudealimentos();
                     return;
                 }
-                break;
+            break;
             default:
                 System.out.println("Opción no válida.");
         }
     }
-    public double calcularSubtotalSinIGV(double precio, int cantidad) {
+        public double calcularSubtotalSinIGV(double precio, int cantidad) {
         double subtotalSinIGV = (precio*cantidad)/1.18;
         return subtotalSinIGV;
     }
@@ -200,16 +155,15 @@ public class Proyecto {
         System.out.println("Total a pagar: S/ " + (Math.round(totalPagar * 100.0) / 100.0));
         System.out.println("----------------------");
         System.out.println("Gracias por su compra vuelva pronto");
-        System.out.println("usted compro  :      una cantidad de  : "+cantidad+" unidades.");
+        System.out.println("usted compro una cantidad de  : "+cantidad+" unidades.");
         System.exit(0);
         return totalPagar;
     }
     public void Mascompras() {
-        System.out.println("usted tiene en su canasta un valor de:"+totalPagar);
+        System.out.println("usted tiene en su canasta un valor de: "+totalPagar+" soles");
         System.out.println("¿DESEA COMPRAR ALGO MÁS?");
         System.out.println("1.SÍ \n2.NO");
         opcion = dakar.nextInt();
-
         if (opcion == 1) {
             this.Menudealimentos();
         } else if (opcion == 2) {
@@ -217,7 +171,7 @@ public class Proyecto {
             pago = dakar.nextDouble();
 
             if (pago == 0) {
-                System.out.println("Compra cancelada.");
+                System.out.println("Ingresa tu pago 😑 no puedes llevar gratis.");
             } else if (pago >= totalPagar) {
                 double vuelto = pago - totalPagar;
                 System.out.println("Pago completo.");
@@ -233,8 +187,8 @@ public class Proyecto {
             System.out.println("Opción no válida.");
         }
     }
-    public static void main (String[] args){
-        Proyecto tiendadealimentos = new Proyecto();
-        tiendadealimentos.Bienvenida();
-    }
-}
+            public static void main (String[] args){
+                Proyecto tiendadealimentos = new Proyecto();
+                tiendadealimentos.Bienvenida();
+            }
+        }

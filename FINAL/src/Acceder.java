@@ -55,7 +55,8 @@ public class Acceder{
             if (dniInput.length() == 8 && dniInput.matches("\\d+")) {
                 dni = Integer.parseInt(dniInput);
                 break;
-            } else {
+            }
+            else {
                 System.out.println("DNI inválido. Debe tener exactamente 8 dígitos.");
             }
         }
