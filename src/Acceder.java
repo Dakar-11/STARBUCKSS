@@ -37,7 +37,7 @@ public class Acceder{
         int contrasena= dakar.nextInt();
         if(nombre.equals(correo) && contra==contrasena){
             Categorias categorias = new Categorias();
-            categorias.menuprincipal();
+            categorias.categorias();
 
         }
     }
@@ -92,17 +92,17 @@ public class Acceder{
         int contrasena2= dakar.nextInt();
         if(correo1.equals(correo2) && contrasena1==contrasena2){
             Categorias categorias = new Categorias();
-            categorias.menuprincipal();
+            categorias.categorias();
         }
         else{
             System.err.println("¡error! correo no valido, registrese de nuevo");
-                System.exit(0);
+            System.exit(0);
         }
     }
     public void invitado(){
         System.out.println("Usted esta accediendo como invitado....");
         Categorias categorias = new Categorias();
-        categorias.menuprincipal();
+        categorias.categorias();
     }
     public static void main(String[] args){
         Acceder acceder= new Acceder();
